@@ -312,6 +312,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2019/09/09/我的第一篇博客文章/",
+  owner: 'nongfu996',
+  repo: 'https://github.com/nongfu996/blog-talk.git',
+  oauth: {
+    client_id: '240e79ba20858a793a9d',
+    client_secret: 'b5bc4a164d6d372ff14cd1fdbd5e94668f25ab6c',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
