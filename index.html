@@ -156,6 +156,175 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-chartjs入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/12/chartjs入门/">chartjs入门</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/12/chartjs入门/" class="archive-article-date">
+  	<time datetime="2019-09-12T02:48:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="chartjs"><a href="#chartjs" class="headerlink" title="chartjs"></a>chartjs</h1><p><strong>chartjs</strong> 就是可以画各种图表的一款前端工具~</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>首先需要 char.min.js，点击下载<a href="http://how2j.cn/frontdownload?bean.id=2097" target="_blank" rel="noopener">http://how2j.cn/frontdownload?bean.id=2097</a></p>
+<p>在这边推荐一下一个网站，前端要引入的资源基本都可以在上面找到：<br><a href="https://www.bootcdn.cn" target="_blank" rel="noopener">https://www.bootcdn.cn</a></p>
+<h3 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h3><pre><code>&lt;div style=&quot;width:400px;margin:0px auto&quot;&gt;
+&lt;canvas id=&quot;myChart&quot; &gt;&lt;/canvas&gt;
+&lt;/div&gt;</code></pre><h3 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h3><p>通过 dom 操作获取 myChart 对象的 2d 上下文：</p>
+<pre><code>var ctx = document.getElementById(&apos;myChart&apos;).getContext(&apos;2d&apos;);</code></pre><ol>
+<li>基于 ctx Chart对象，并传递如下参数进去</li>
+<li>type: ‘line’ 表示这个是一个线型图表。 如果要柱状图，修改成 ‘bar’ 就可以了</li>
+<li>data: 提供要显示的数据</li>
+<li>labels 表示数据下方的文字： ‘红’, ‘蓝’, ‘黄’, ‘绿’, ‘紫’, ‘橙’</li>
+<li>datasets 表示数据集合。 这里数据集合里只有一个数据，如果是多个数据，就会在图表上看到多条线，所以这里只会看到一条线。</li>
+<li>label: 这组数据的名称</li>
+<li>data: 具体数据</li>
+<li>borderColor: 线条颜色</li>
+<li>borderWidth: 线条宽度</li>
+<li>fill: false. 不进行填充</li>
+<li>options: 其他选项</li>
+<li>tooltips 表示鼠标移动到图标的时候的提示信息。</li>
+<li>intersect: false. 表示鼠标不放在数据点上时，也会显示提示信息。</li>
+<li>model: ‘index’ 显示模式</li>
+</ol>
+<p><code>&lt;script&gt;
+var ctx = document.getElementById(&#39;myChart&#39;).getContext(&#39;2d&#39;);
+var myChart = new Chart(ctx, {
+type: &#39;line&#39;,
+data: {
+labels: [&#39;红&#39;, &#39;蓝&#39;, &#39;黄&#39;, &#39;绿&#39;, &#39;紫&#39;, &#39;橙&#39;],
+datasets: [{
+label: &#39;示例&#39;,
+data: [12, 19, 3, 5, 2, 3],
+borderColor:&#39;blue&#39;,
+borderWidth: 1,
+fill: false,
+}]
+},
+options: {
+tooltips: {
+intersect: false,
+mode: &#39;index&#39;
+}
+}
+});
+&lt;/script&gt;</code></p>
+<h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="https://i.imgur.com/ijBHjfh.png" alt>：</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/12/chartjs入门/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-无法打开虚拟机，获得所有权失败-解决方案vmware" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/12/无法打开虚拟机，获得所有权失败-解决方案vmware/">&#39;无法打开虚拟机，获得所有权失败&#39;解决方案vmware</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/12/无法打开虚拟机，获得所有权失败-解决方案vmware/" class="archive-article-date">
+  	<time datetime="2019-09-12T02:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/12/无法打开虚拟机，获得所有权失败-解决方案vmware/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webpack-入门安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

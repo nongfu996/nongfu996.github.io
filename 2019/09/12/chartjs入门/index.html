@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | LaiTX&#39;s blog</title>
+  <title>chartjs入门 | LaiTX&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LaiTX&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="chartjschartjs 就是可以画各种图表的一款前端工具~ 使用首先需要 char.min.js，点击下载http://how2j.cn/frontdownload?bean.id=2097 在这边推荐一下一个网站，前端要引入的资源基本都可以在上面找到：https://www.bootcdn.cn html代码&amp;lt;div style=&amp;quot;width:400px;margin:0p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="chartjs入门">
+<meta property="og:url" content="http://yoursite.com/2019/09/12/chartjs入门/index.html">
 <meta property="og:site_name" content="LaiTX&#39;s blog">
+<meta property="og:description" content="chartjschartjs 就是可以画各种图表的一款前端工具~ 使用首先需要 char.min.js，点击下载http://how2j.cn/frontdownload?bean.id=2097 在这边推荐一下一个网站，前端要引入的资源基本都可以在上面找到：https://www.bootcdn.cn html代码&amp;lt;div style=&amp;quot;width:400px;margin:0p">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/ijBHjfh.png">
+<meta property="og:updated_time" content="2019-09-12T02:48:47.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LaiTX&#39;s blog">
+<meta name="twitter:title" content="chartjs入门">
+<meta name="twitter:description" content="chartjschartjs 就是可以画各种图表的一款前端工具~ 使用首先需要 char.min.js，点击下载http://how2j.cn/frontdownload?bean.id=2097 在这边推荐一下一个网站，前端要引入的资源基本都可以在上面找到：https://www.bootcdn.cn html代码&amp;lt;div style=&amp;quot;width:400px;margin:0p">
+<meta name="twitter:image" content="https://i.imgur.com/ijBHjfh.png">
   
     <link rel="alternative" href="/atom.xml" title="LaiTX&#39;s blog" type="application/atom+xml">
   
@@ -154,103 +160,210 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-chartjs入门" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      chartjs入门
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/12/chartjs入门/" class="archive-article-date">
+
+        
+        <a href="/2019/09/12/chartjs入门/" class="archive-article-date">
   	<time datetime="2019-09-12T02:48:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/12/chartjs入门/">chartjs入门</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="chartjs"><a href="#chartjs" class="headerlink" title="chartjs"></a>chartjs</h1><p><strong>chartjs</strong> 就是可以画各种图表的一款前端工具~</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>首先需要 char.min.js，点击下载<a href="http://how2j.cn/frontdownload?bean.id=2097" target="_blank" rel="noopener">http://how2j.cn/frontdownload?bean.id=2097</a></p>
+<p>在这边推荐一下一个网站，前端要引入的资源基本都可以在上面找到：<br><a href="https://www.bootcdn.cn" target="_blank" rel="noopener">https://www.bootcdn.cn</a></p>
+<h3 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h3><pre><code>&lt;div style=&quot;width:400px;margin:0px auto&quot;&gt;
+&lt;canvas id=&quot;myChart&quot; &gt;&lt;/canvas&gt;
+&lt;/div&gt;</code></pre><h3 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h3><p>通过 dom 操作获取 myChart 对象的 2d 上下文：</p>
+<pre><code>var ctx = document.getElementById(&apos;myChart&apos;).getContext(&apos;2d&apos;);</code></pre><ol>
+<li>基于 ctx Chart对象，并传递如下参数进去</li>
+<li>type: ‘line’ 表示这个是一个线型图表。 如果要柱状图，修改成 ‘bar’ 就可以了</li>
+<li>data: 提供要显示的数据</li>
+<li>labels 表示数据下方的文字： ‘红’, ‘蓝’, ‘黄’, ‘绿’, ‘紫’, ‘橙’</li>
+<li>datasets 表示数据集合。 这里数据集合里只有一个数据，如果是多个数据，就会在图表上看到多条线，所以这里只会看到一条线。</li>
+<li>label: 这组数据的名称</li>
+<li>data: 具体数据</li>
+<li>borderColor: 线条颜色</li>
+<li>borderWidth: 线条宽度</li>
+<li>fill: false. 不进行填充</li>
+<li>options: 其他选项</li>
+<li>tooltips 表示鼠标移动到图标的时候的提示信息。</li>
+<li>intersect: false. 表示鼠标不放在数据点上时，也会显示提示信息。</li>
+<li>model: ‘index’ 显示模式</li>
+</ol>
+<p><code>&lt;script&gt;
+var ctx = document.getElementById(&#39;myChart&#39;).getContext(&#39;2d&#39;);
+var myChart = new Chart(ctx, {
+type: &#39;line&#39;,
+data: {
+labels: [&#39;红&#39;, &#39;蓝&#39;, &#39;黄&#39;, &#39;绿&#39;, &#39;紫&#39;, &#39;橙&#39;],
+datasets: [{
+label: &#39;示例&#39;,
+data: [12, 19, 3, 5, 2, 3],
+borderColor:&#39;blue&#39;,
+borderWidth: 1,
+fill: false,
+}]
+},
+options: {
+tooltips: {
+intersect: false,
+mode: &#39;index&#39;
+}
+}
+});
+&lt;/script&gt;</code></p>
+<h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="https://i.imgur.com/ijBHjfh.png" alt>：</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/static/zfb.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/static/wec.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/12/chartjs入门/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/12/无法打开虚拟机，获得所有权失败-解决方案vmware/" class="archive-article-date">
-  	<time datetime="2019-09-12T02:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/12/无法打开虚拟机，获得所有权失败-解决方案vmware/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">&#39;无法打开虚拟机，获得所有权失败&#39;解决方案vmware</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/12/无法打开虚拟机，获得所有权失败-解决方案vmware/">&#39;无法打开虚拟机，获得所有权失败&#39;解决方案vmware</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/11/webpack-入门安装/" class="archive-article-date">
-  	<time datetime="2019-09-11T04:03:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/11/webpack-入门安装/">webpack-入门安装</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -273,8 +386,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
