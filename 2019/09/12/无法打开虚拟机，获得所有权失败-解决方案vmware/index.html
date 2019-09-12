@@ -467,30 +467,31 @@
 
 
 
-
+  <div id="giteement-ctn"></div>
   
-  <div id="gitment-ctn"></div>
-  
-    <!-- 中文 -->
-    <link rel="stylesheet" href="/lib/gitment.css">
-    <script src="/lib/gitment.js"></script>
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
   
   <script>
-    <!-- id: "&#39;无法打开虚拟机，获得所有权失败&#39;解决方案vmware" -->
-    var gitment = new Gitment({
-      id: "20190912103810",
-      owner: 'nongfu996',
-      repo: 'yilia-plus-demo',
-      oauth: {
-        client_id: '374ac7a2d29c292a8093',
-        client_secret: 'acafec460b98e2d6db2ed8b29aae340d90421bbb',
-      },
-    })
-    gitment.render('gitment-ctn')
+  <!-- id: "&#39;无法打开虚拟机，获得所有权失败&#39;解决方案vmware" -->
+  var giteement = new Giteement({
+    id: '20190912103810',
+    owner: 'Taomiya',
+    repo: 'yilia-plus-demo',
+    backcall_uri: 'https://nongfu996.github.io',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: 'faade686a498fed131d40ec6d8160ad01aa7d81035a1c6e17cd310c93c306279',
+      client_secret: 'eb16ec2e52d1d5ef072690669f66b379ac215827f6bf30c2e5ed887465c00dd3'
+    },
+  })
+  giteement.render('giteement-ctn')
   </script>
 
 
-  
+
+
+
 
 
 
@@ -628,15 +629,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">webpack打包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">webpack打包</a>
               </li>
             
             <div class="clearfix"></div>
