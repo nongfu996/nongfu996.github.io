@@ -179,49 +179,9 @@
         <h1 id="chartjs"><a href="#chartjs" class="headerlink" title="chartjs"></a>chartjs</h1><p><strong>chartjs</strong> 就是可以画各种图表的一款前端工具~</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>首先需要 char.min.js，点击下载<a href="http://how2j.cn/frontdownload?bean.id=2097" target="_blank" rel="noopener">http://how2j.cn/frontdownload?bean.id=2097</a></p>
 <p>在这边推荐一下一个网站，前端要引入的资源基本都可以在上面找到：<br><a href="https://www.bootcdn.cn" target="_blank" rel="noopener">https://www.bootcdn.cn</a></p>
-<h3 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h3><pre><code>&lt;div style=&quot;width:400px;margin:0px auto&quot;&gt;
-&lt;canvas id=&quot;myChart&quot; &gt;&lt;/canvas&gt;
-&lt;/div&gt;</code></pre><h3 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h3><p>通过 dom 操作获取 myChart 对象的 2d 上下文：</p>
-<pre><code>var ctx = document.getElementById(&apos;myChart&apos;).getContext(&apos;2d&apos;);</code></pre><ol>
-<li>基于 ctx Chart对象，并传递如下参数进去</li>
-<li>type: ‘line’ 表示这个是一个线型图表。 如果要柱状图，修改成 ‘bar’ 就可以了</li>
-<li>data: 提供要显示的数据</li>
-<li>labels 表示数据下方的文字： ‘红’, ‘蓝’, ‘黄’, ‘绿’, ‘紫’, ‘橙’</li>
-<li>datasets 表示数据集合。 这里数据集合里只有一个数据，如果是多个数据，就会在图表上看到多条线，所以这里只会看到一条线。</li>
-<li>label: 这组数据的名称</li>
-<li>data: 具体数据</li>
-<li>borderColor: 线条颜色</li>
-<li>borderWidth: 线条宽度</li>
-<li>fill: false. 不进行填充</li>
-<li>options: 其他选项</li>
-<li>tooltips 表示鼠标移动到图标的时候的提示信息。</li>
-<li>intersect: false. 表示鼠标不放在数据点上时，也会显示提示信息。</li>
-<li>model: ‘index’ 显示模式</li>
-</ol>
-<p><code>&lt;script&gt;
-var ctx = document.getElementById(&#39;myChart&#39;).getContext(&#39;2d&#39;);
-var myChart = new Chart(ctx, {
-type: &#39;line&#39;,
-data: {
-labels: [&#39;红&#39;, &#39;蓝&#39;, &#39;黄&#39;, &#39;绿&#39;, &#39;紫&#39;, &#39;橙&#39;],
-datasets: [{
-label: &#39;示例&#39;,
-data: [12, 19, 3, 5, 2, 3],
-borderColor:&#39;blue&#39;,
-borderWidth: 1,
-fill: false,
-}]
-},
-options: {
-tooltips: {
-intersect: false,
-mode: &#39;index&#39;
-}
-}
-});
-&lt;/script&gt;</code></p>
-<h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="https://i.imgur.com/ijBHjfh.png" alt>：</p>
-
+        
+          <a class="article-more-a" href="/2019/09/12/chartjs入门/#more">more >></a>
+        
       
 
       
@@ -229,6 +189,21 @@ mode: &#39;index&#39;
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">chartjs</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -284,21 +259,9 @@ mode: &#39;index&#39;
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>有时候我们用着虚拟机，然后忽然断网或者直接关机，再重新打开软件的时候 提示 “无法打开虚拟机，是否强制获取虚拟机所有权”，但是点击获取之后，就提示”获取所有权失败”</strong></p>
-<blockquote>
-<p>原因：</p>
-<p>虚拟机的硬盘和自己电脑的主机是共享硬盘的。</p>
-<p>当虚拟机使用主机时就会产生一个硬盘锁。</p>
-<p>如果正常关机或者关闭虚拟机，会自动将这个锁关掉。</p>
-<p>遇到非正常情况，则会继续存在在硬盘之中。</p>
-<p>有了这个文件，打开虚拟机软件的时候，系统就会判断该虚拟机为打开状态，使无法运行。</p>
-</blockquote>
-<p><img src="https://i.imgur.com/9uUjexa.png" alt></p>
-<blockquote>
-<p>解决方案:</p>
-<p>删除这个文件就好。</p>
-<p>在虚拟机目录下， lck文件。</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2019/09/12/无法打开虚拟机，获得所有权失败-解决方案vmware/#more">more >></a>
+        
       
 
       
@@ -306,6 +269,21 @@ mode: &#39;index&#39;
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -361,8 +339,9 @@ mode: &#39;index&#39;
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><h3 id="webpack安装"><a href="#webpack安装" class="headerlink" title="webpack安装"></a>webpack安装</h3><h5 id="webpack是一个前端打包工具。一些-js-资源彼此之前存在依赖关系，当一个页面需要加载多个-js-的话，也会拖累整个页面的加载速度。所以为了解决这个问题，-如图所示，webpack-就把左边的各种各样的静态资源，打包成了一个所谓的-assets-这样浏览器加载起来就快多了。"><a href="#webpack是一个前端打包工具。一些-js-资源彼此之前存在依赖关系，当一个页面需要加载多个-js-的话，也会拖累整个页面的加载速度。所以为了解决这个问题，-如图所示，webpack-就把左边的各种各样的静态资源，打包成了一个所谓的-assets-这样浏览器加载起来就快多了。" class="headerlink" title="webpack是一个前端打包工具。一些 js 资源彼此之前存在依赖关系，当一个页面需要加载多个 .js 的话，也会拖累整个页面的加载速度。所以为了解决这个问题， 如图所示，webpack 就把左边的各种各样的静态资源，打包成了一个所谓的 assets. 这样浏览器加载起来就快多了。"></a>webpack是一个前端打包工具。一些 js 资源彼此之前存在依赖关系，当一个页面需要加载多个 .js 的话，也会拖累整个页面的加载速度。所以为了解决这个问题， 如图所示，webpack 就把左边的各种各样的静态资源，打包成了一个所谓的 assets. 这样浏览器加载起来就快多了。</h5><p><img src="http://stepimagewm.how2j.cn/7949.png" alt="效果图"></p>
-<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><h5 id="webpack-的运行，是需要依赖-node-js-的运行环境的，所以请安装-node-js。"><a href="#webpack-的运行，是需要依赖-node-js-的运行环境的，所以请安装-node-js。" class="headerlink" title="webpack 的运行，是需要依赖 node.js 的运行环境的，所以请安装 node.js。"></a>webpack 的运行，是需要依赖 node.js 的运行环境的，所以请安装 node.js。</h5><h3 id="关于webpack版本"><a href="#关于webpack版本" class="headerlink" title="关于webpack版本"></a>关于webpack版本</h3><h5 id="在-windows-里安装，-用-cnpm-方式安装-1-13-2-版本是可以正常运行的。"><a href="#在-windows-里安装，-用-cnpm-方式安装-1-13-2-版本是可以正常运行的。" class="headerlink" title="在 windows 里安装， 用 cnpm 方式安装 @1.13.2 版本是可以正常运行的。"></a>在 windows 里安装， 用 cnpm 方式安装 @1.13.2 版本是可以正常运行的。</h5><h3 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h3><h5 id="cmd中指令：cnpm-install-g-webpack-1-13-2"><a href="#cmd中指令：cnpm-install-g-webpack-1-13-2" class="headerlink" title="cmd中指令：cnpm install -g webpack@1.13.2"></a>cmd中指令：cnpm install -g <a href="mailto:webpack@1.13.2" target="_blank" rel="noopener">webpack@1.13.2</a></h5><h5 id="安装结束后，运行：webpack，效果如图："><a href="#安装结束后，运行：webpack，效果如图：" class="headerlink" title="安装结束后，运行：webpack，效果如图："></a>安装结束后，运行：webpack，效果如图：</h5><p><img src="http://stepimagewm.how2j.cn/7953.png" alt="效果图"></p>
-
+        
+          <a class="article-more-a" href="/2019/09/11/webpack-入门安装/#more">more >></a>
+        
       
 
       
@@ -370,6 +349,21 @@ mode: &#39;index&#39;
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">webpack打包</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -495,6 +489,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">chartjs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">webpack打包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
